@@ -1,0 +1,140 @@
+* {
+    box-sizing:border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font: size 16px;
+    font-weight: normal;
+    text-decoration: none;
+    color: black;
+}
+
+
+html,body,p {
+    padding: 0%;
+    margin: 0%;
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.page_content{
+    flex: 1 0 auto;
+}
+
+.stopka{
+    flex-shrink: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+}
+nav *{
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+h1{
+    padding-top: 30px;
+}
+.main_cont{
+    display: flex;
+    flex-direction: row;
+    margin: 15px;
+    align-items: stretch;
+}
+
+
+.main_header{
+    padding: 0%;
+    margin: 0%;
+    height: 60px;
+    width: 70%;
+    font-size: 1.5em;
+    align-self: flex-end;
+    border-left: 2px;
+    border-bottom: 2px;
+    border-bottom-color: black;
+    border-left-color: black;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    background-color: gray; 
+    overflow-wrap: break-word;
+}
+
+.main_article{
+    display: flex;
+    flex-direction: column;
+}
+
+
+article{
+    width: 100%;
+    margin: 15px;   
+    border: 2px;
+    border-color:black;
+    border-style:solid;
+}
+.main_paragraph{
+    text-align: justify;
+    margin: 15px;
+}
+
+.header_cont{
+    margin-left: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;  
+    align-items: center;
+}
+.header_nav{
+    flex-grow:2; 
+}
+.logo{
+    align-self: flex-start;
+}
+.tytuł{
+    font-size: 200%;
+    flex-grow: 1;
+    font-weight: bold;
+}
+.hamburger{
+    display: none;
+    margin-right: 30px;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    background-color: gray;
+    border-top: 2px solid black;
+    margin-top: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p+p{
+    font-weight: bold;
+}
+
+@media all and (max-width: 900px) {
+    main {
+        flex-wrap: wrap;
+    }
+    .tytuł{
+        font-size: 120%;
+    }
+    .header_nav{
+        display: none;
+    }
+    .header_cont{
+        justify-content: flex-start;
+    }
+    .hamburger{
+        display: inline;
+        justify-content: flex-end;
+    }
+   
+}
